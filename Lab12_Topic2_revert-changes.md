@@ -51,4 +51,98 @@ git ช่วยได้หลายขั้นตอนเลย
 **ควร commit เฉพาะงานที่ work เพราะว่าจะมีประโยชน์มากกว่าการ commit งานที่เสร็จครึ่งๆ กลางๆ เว้นเสียแต่วันนี้ยังทำไม่เสร็จ ต้อง commit ไว้ก่อน**
 
 
-## 2. ยกเลิกการแก้ไขไฟล์ที่ยังไม่ทำการ ```git commit``` ###
+---
+## 2. ยกเลิกการแก้ไขไฟล์หลังทำการ ```git add``` และก่อน ```git commit```###
+
+หลังจากที่เราทำการ add ไฟล์ใดๆ เข้าไปยัง staging area แล้ว มันจะพร้อมสำหรับการ commit และ/หรือ push ไปยัง remote repository
+แต่ในบางครั้ง มีบางเหตุผลที่ต้องยกเลิกการ add ไฟล์ เราสามารถทำได้ตามขั้นตอนต่อไปนี้
+### ขั้นเตรียมการ ###
+1. แก้ไขไฟล์ Readme.md
+
+![](./images/Lab12-fig12.png)
+
+
+ตรวจสอบโดย github desktop
+
+![](./images/Lab12-fig13.png)
+
+
+2. เพิ่มไฟล์ Readme.md ไปยัง staging area ด้วยคำสั่ง ```git add Readme.md````
+
+3. เช็คสถานะ git ด้วยคำสั่ง ```git status```
+
+![](./images/Lab12-fig14.png)
+
+จะเห็นว่าคำสั่ง ```git status``` จะมีคำแนะนำบางอย่าง ซึ่งเราสามารถนำมาใช้เพื่อยกเลิกการกระทำขั้นก่อนหน้านี้ได้
+### ขั้นแก้ไขปัญหา ###
+
+4. ล้างค่าใน staging area โดยคำสั่ง ```git restore --staged Readme.md"```
+
+![](./images/Lab12-fig15.png)
+
+5. ยกเลิกการเพิ่มไฟล์เข้าไปใน staging areae ตามขั้นตอนการทดลองในหัวข้อก่อนหน้านี้ หรือทำตามคำแนะนำใน git bash 
+(ในขั้นนี้จะลองทำตามที่ git bashบอก คือ ) ```git restore Readme.md```
+
+![](./images/Lab12-fig16.png)
+
+
+### ขั้นตรวจสอบผลลัพธ์ ###
+
+6. ตรวจสอบไฟล์ใน editor และ github desktop
+
+![](./images/Lab12-fig17.png)
+
+
+
+![](./images/Lab12-fig18.png)
+
+---
+## 2. ยกเลิกการแก้ไขไฟล์หลังทำการ ```git commit```###
+
+เมื่อเราทำการ commit ไปแล้ว ก็สามารถยกเลิกการ commit ได้เช่นกัน
+
+### ขั้นเตรียมการ ###
+1. แก้ไขไฟล์ Readme.md
+
+![](./images/Lab12-fig19.png)
+
+![](./images/Lab12-fig20.png)
+
+
+2. เพิ่ม Readme.md เข้าไปยัง staging area โดยคำสั่ง ```git add Readme.md```
+   
+![](./images/Lab12-fig21.png)
+
+
+3. commit ไฟล์ Readme.md โดยคำสั่ง ```git commit -m "commit Readme.md"```
+
+![](./images/Lab12-fig22.png)
+ 
+
+### ขั้นแก้ไขปัญหา ###
+
+4. ยกเลิกการ commit โดยพิมพ์คำสั่ง ```git revert HEAD```
+จะปรากฏ text editor ขึ้นมา 
+   * ใครเชื่อมไว้กับ text editor ของ OS ก็แก้ไขข้อความบน text editor นั้นได้เลย แต่ถ้าไม่ได้เชื่อมไว้ ต้องแก้บน text editor บน git bash
+   * ทำตามคำอธิบายในภาพด้านล่างนี้
+
+![](./images/Lab12-fig23.png)
+
+5. เมื่อกลับมาจาก text editor จะปรากฏข้อความต่อไปนี้
+
+
+![](./images/Lab12-fig24.png)
+
+
+### ขั้นตรวจสอบผลลัพธ์ ###
+6. ตรวจสอบไฟล์ต้นฉบับด้วย text editor และ github desktop
+
+![](./images/Lab12-fig25.png)
+
+![](./images/Lab12-fig26.png)
+
+7. ตรวจสอบ history log ด้วยคำสั่ง ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short```
+
+
+![](./images/Lab12-fig27.png)
+
