@@ -32,7 +32,11 @@
 ![](./images/Lab12-fig4.png)
 
    - ให้ capture หน้าจอนักศึกษามาวางในใบงาน
-   **_คำแนะนำ_** ถ้าประวัติมีความยาวมาก ที่บรรทัดสุดท้าย จะมีเครื่องหมาย colon  ```:``` แสดงว่าระบบยังแสดงประวัติไม่หมด ให้เคาะ space bar ไปจนกว่าจะหมดข้อความ (มีคำว่า ```(END)```) ตรงนี้เมื่อกดปุ่มใดๆ จะไม่มีการตอบสนอง ให้กด ```Shift``` ค้างไว้และกดปุ่ม ```z``` สองครั้ง  
+   **_คำแนะนำ_** ถ้าประวัติมีความยาวมาก ที่บรรทัดสุดท้าย จะมีเครื่องหมาย colon  ```:``` แสดงว่าระบบยังแสดงประวัติไม่หมด ให้เคาะ space bar ไปจนกว่าจะหมดข้อความ (มีคำว่า ```(END)```) ตรงนี้เมื่อกดปุ่มใดๆ จะไม่มีการตอบสนอง ให้กด ```Shift``` ค้างไว้และกดปุ่ม ```z``` สองครั้ง
+   
+<img src="images/pic1/1.png">
+<img src="images/pic1/1-2.png">
+<img src="images/pic1/1-3.png">
 
 ### ดูประวัติบรรทัดเดียว (one line history) ###
 
@@ -46,6 +50,8 @@
 
    - ให้ capture หน้าจอนักศึกษามาวางในใบงาน
    **_คำแนะนำ_** ถ้าข้อความล้นบรรทัด ระบบจะปัดลงมา ทำให้ดูลำบาก สามารถปรับความกว้างของ git bash ให้มากขึ้น แล้ว พิมพ์คำสั่ง  ```git log --pretty=oneline``` อีกครั้ง
+   
+<img src="images/pic1/2.png">
 
 
 ### ควบคุมการดูประวัติบรรทัดเดียว (one line history) แบบต่าง ๆ ###
@@ -57,29 +63,40 @@ ___แสดงเพียง 2 commit___
     git log --pretty=oneline --max-count=2
 ```
 
+<img src="images/pic1/3.png">
+
 ___แสดงประวัตินับจาก 5 นาทีที่แล้ว___
 ```
     git log --pretty=oneline --since='5 minutes ago'
 ```
+
 **_คำแนะนำ_** สามารถเปลี่ยน ```minutes``` เป็นหน้วยเวลาอื่นๆ เช่น ```days```
+
+<img src="images/pic1/4.png">
 
 
 ___แสดงประวัติจนถึง 5 นาทีที่แล้ว___
 
 ```git log --pretty=oneline --until='5 minutes ago'```
+
 **_คำแนะนำ_** สามารถเปลี่ยน ```minutes``` เป็นหน้วยเวลาอื่นๆ เช่น ```days```
+
+<img src="images/pic1/5.png">
 
 
 ___แสดงประวัติตามชื่อผู้ commit___
 
 ```git log --pretty=oneline --author=<your name>```
 
+<img src="images/pic1/6.png">
+
 
 ___แสดงประวัติทั้งหมด___
 ```git log --pretty=oneline --all```
 
-
 **_คำแนะนำ_** ดูคำสั่ง ``git log`` ทั้งหมดได้โดยการพิมพ์  ```git log --help```
+
+<img src="images/pic1/7.png">
 
 
 ## _ให้นักศึกษาทดลองคำสั่งข้างบน แล้ว capture หน้าจอมาส่ง โดยแทรกใต้คำสั่งในตัวอย่าง_ ##
@@ -90,12 +107,28 @@ ___แสดงประวัติทั้งหมด___
 พิมพ์คำสั่งต่อไปนี้ (ครั้งละคำสั่ง) สังเกตุผลที่ได้ บันทึกผลและอธิบาย
 
 1.  ```git log --pretty=format:'%h'```
+
+<img src="images/pic1/8.png">
+
 2.  ```git log --pretty=format:'%h %ad'```
+
+<img src="images/pic1/9.png">
+
 3.  ```git log --pretty=format:'%h %ad' --date=short```
-4.  ```git log --pretty=format:'%h %ad' --date=short```
-5.  ```git log --pretty=format:'%h %ad | %s%d' --date=short```
-6.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short```
-7.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short --graph```
+
+<img src="images/pic1/10.png">
+
+4.  ```git log --pretty=format:'%h %ad | %s%d' --date=short```
+
+<img src="images/pic1/11.png">
+
+5.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short```
+
+<img src="images/pic1/12.png">
+
+6.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short --graph```
+
+<img src="images/pic1/13.png">
 
 
 #### รูปแบบคำสั่งควบคุมการแสดงผล ####
