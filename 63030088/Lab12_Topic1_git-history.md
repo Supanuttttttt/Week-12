@@ -33,7 +33,8 @@
 
    - ให้ capture หน้าจอนักศึกษามาวางในใบงาน
    **_คำแนะนำ_** ถ้าประวัติมีความยาวมาก ที่บรรทัดสุดท้าย จะมีเครื่องหมาย colon  ```:``` แสดงว่าระบบยังแสดงประวัติไม่หมด ให้เคาะ space bar ไปจนกว่าจะหมดข้อความ (มีคำว่า ```(END)```) ตรงนี้เมื่อกดปุ่มใดๆ จะไม่มีการตอบสนอง ให้กด ```Shift``` ค้างไว้และกดปุ่ม ```z``` สองครั้ง  
-
+![](./images/mypic1/1.1.png)
+![](./images/mypic1/1.2.png)
 ### ดูประวัติบรรทัดเดียว (one line history) ###
 
 จากข้อ 4 จะเห็นว่าระบบมีการแสดงข้อความของแต่ละ commit ออกมาเป็นจำนวนมาก 
@@ -82,6 +83,13 @@ ___แสดงประวัติทั้งหมด___
 **_คำแนะนำ_** ดูคำสั่ง ``git log`` ทั้งหมดได้โดยการพิมพ์  ```git log --help```
 
 
+![](./images/mypic1/2.png)
+![](./images/mypic1/3.png)
+![](./images/mypic1/4.png)
+![](./images/mypic1/5.png)
+![](./images/mypic1/6.png)
+![](./images/mypic1/7.png)
+
 ## _ให้นักศึกษาทดลองคำสั่งข้างบน แล้ว capture หน้าจอมาส่ง โดยแทรกใต้คำสั่งในตัวอย่าง_ ##
 
 
@@ -96,6 +104,14 @@ ___แสดงประวัติทั้งหมด___
 5.  ```git log --pretty=format:'%h %ad | %s%d' --date=short```
 6.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short```
 7.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short --graph```
+
+![](./images/mypic1/1-1.png)
+![](./images/mypic1/1-2.png)
+![](./images/mypic1/1-3.png)
+![](./images/mypic1/1-4.png)
+![](./images/mypic1/1-5.png)
+![](./images/mypic1/1-6.png)
+![](./images/mypic1/1-7.png)
 
 
 #### รูปแบบคำสั่งควบคุมการแสดงผล ####
