@@ -12,12 +12,15 @@
 
 2. ดูประวัติการ commit ทั้งหมดใน repository (ด้วยคำสั่ง ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short```)
    **คำสั่ง** ให้จับภาพหน้าจอมาวางในใบงาน
+   ![image](https://user-images.githubusercontent.com/92082798/141684646-f7da6fa4-6d43-4b4e-ba2d-b6cf62c44586.png)
 
 3. ย้อนไปดูไฟล์ตามประวัติการแก้ไข
     
    * คำสั่ง ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short``` จะบอกข้อมูลที่สำคัญคือ hash value ของ commit เราสามารถกระโดดย้อนเวลาไปยัง commit นั้นได้โดยใช้คำสั่ง ```git checkout <hash>``` โดย <hash> ก็คือตัวเลขผสมตัวอักษรที่ปรากฏอยู่คอลัมน์แรกสุดของแต่ละ commit
    * ทดลอง checkout commit แรกสุด และ commit ที่ชื่อ edit typo เพื่อดูความแตกต่างในเนื้อหาของไฟล์     *
    * capture หน้าจอของไฟล์ readme.md เปรียบเทียบกันใน 2 commit นั้น
+  ![image](https://user-images.githubusercontent.com/92082798/141684751-bea49f95-6a1d-4e2e-9e45-20bafc2b8a68.png)
+  ![image](https://user-images.githubusercontent.com/92082798/141684757-39f37473-3b23-43d5-9e99-de49da0ba645.png)
    * สังเกตุที่หน้าจอ git bash ในวงเล็บท้ายชื่อ path จะแสดงหมายเลข commit
    * ในขณะ checkout ไปยัง commit อ่านและทำความเข้าใจข้อความแจ้งเตือนที่ปรากฏที่หน้าจอ อธิบายตามความเข้าใจ 
 
@@ -27,7 +30,7 @@
    * สังเกตุชื่อ repository ในหน้าต่าง git bash ตอนท้ายจะมี ((V1))) แสดงว่าระบบได้ทำการสร้างชื่อใหม่ให้กับ commit นี้แล้ว โดนเรากำหนดให้เป็น V1 ซึ่งหมายถึง version 1
 
 5. ให้ branch กลับไปยัง main branch โดยคำสั่ง ```git checkout main```
-
+  ![image](https://user-images.githubusercontent.com/92082798/141684775-08106527-93f6-4c44-b791-9d191ace510e.png)
 6. ทดลอง branch กลับไปยัง commit นั้น โดยใช้ ```git checkout V1```
     * เปรียบเทียบผลที่ได้กับการใช้คำสั่ง git branch <hash>
 
