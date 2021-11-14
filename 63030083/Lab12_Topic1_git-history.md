@@ -32,7 +32,9 @@
 ![](./images/Lab12-fig4.png)
 
    - ให้ capture หน้าจอนักศึกษามาวางในใบงาน
-   **_คำแนะนำ_** ถ้าประวัติมีความยาวมาก ที่บรรทัดสุดท้าย จะมีเครื่องหมาย colon  ```:``` แสดงว่าระบบยังแสดงประวัติไม่หมด ให้เคาะ space bar ไปจนกว่าจะหมดข้อความ (มีคำว่า ```(END)```) ตรงนี้เมื่อกดปุ่มใดๆ จะไม่มีการตอบสนอง ให้กด ```Shift``` ค้างไว้และกดปุ่ม ```z``` สองครั้ง  
+   **_คำแนะนำ_** ถ้าประวัติมีความยาวมาก ที่บรรทัดสุดท้าย จะมีเครื่องหมาย colon  ```:``` แสดงว่าระบบยังแสดงประวัติไม่หมด ให้เคาะ space bar ไปจนกว่าจะหมดข้อความ (มีคำว่า ```(END)```) ตรงนี้เมื่อกดปุ่มใดๆ จะไม่มีการตอบสนอง ให้กด ```Shift``` ค้างไว้และกดปุ่ม ```z``` สองครั้ง 
+![image](https://user-images.githubusercontent.com/92082798/141684083-35b3ded2-bc7a-4636-b567-091e3b428d1c.png)
+
 
 ### ดูประวัติบรรทัดเดียว (one line history) ###
 
@@ -46,6 +48,7 @@
 
    - ให้ capture หน้าจอนักศึกษามาวางในใบงาน
    **_คำแนะนำ_** ถ้าข้อความล้นบรรทัด ระบบจะปัดลงมา ทำให้ดูลำบาก สามารถปรับความกว้างของ git bash ให้มากขึ้น แล้ว พิมพ์คำสั่ง  ```git log --pretty=oneline``` อีกครั้ง
+   ![image](https://user-images.githubusercontent.com/92082798/141684119-f9db9971-7556-4d9c-ab65-8208152c92ea.png)
 
 
 ### ควบคุมการดูประวัติบรรทัดเดียว (one line history) แบบต่าง ๆ ###
@@ -90,12 +93,19 @@ ___แสดงประวัติทั้งหมด___
 พิมพ์คำสั่งต่อไปนี้ (ครั้งละคำสั่ง) สังเกตุผลที่ได้ บันทึกผลและอธิบาย
 
 1.  ```git log --pretty=format:'%h'```
+![image](https://user-images.githubusercontent.com/92082798/141684203-8b8e8dac-2f80-4d8b-b9b1-65d8e75fbda4.png)
 2.  ```git log --pretty=format:'%h %ad'```
+![image](https://user-images.githubusercontent.com/92082798/141684208-f3a4c9b8-769e-420d-a7e4-1cfd633acf33.png)
 3.  ```git log --pretty=format:'%h %ad' --date=short```
+![image](https://user-images.githubusercontent.com/92082798/141684212-741c57a4-43b0-45a8-8cec-d9a3dc5e9142.png)
 4.  ```git log --pretty=format:'%h %ad' --date=short```
+![image](https://user-images.githubusercontent.com/92082798/141684217-1bffc122-f08e-4d61-96ab-d1f3687da371.png)
 5.  ```git log --pretty=format:'%h %ad | %s%d' --date=short```
+![image](https://user-images.githubusercontent.com/92082798/141684226-42845acf-2e10-4a81-88ec-15c36bed8570.png)
 6.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short```
+![image](https://user-images.githubusercontent.com/92082798/141684228-c0d3ee7e-67df-4d51-b40e-b8ca32bf48a4.png)
 7.  ```git log --pretty=format:'%h %ad | %s%d [%an]' --date=short --graph```
+![image](https://user-images.githubusercontent.com/92082798/141684234-6380c280-3d0a-44c6-8f31-3db8b73cc7ee.png)
 
 
 #### รูปแบบคำสั่งควบคุมการแสดงผล ####
