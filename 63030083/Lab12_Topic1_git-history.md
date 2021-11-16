@@ -93,9 +93,13 @@ ___แสดงประวัติทั้งหมด___
 พิมพ์คำสั่งต่อไปนี้ (ครั้งละคำสั่ง) สังเกตุผลที่ได้ บันทึกผลและอธิบาย
 
 1.  ```git log --pretty=format:'%h'```
+
 ![image](https://user-images.githubusercontent.com/92082798/141684203-8b8e8dac-2f80-4d8b-b9b1-65d8e75fbda4.png)
+
 2.  ```git log --pretty=format:'%h %ad'```
+
 ![image](https://user-images.githubusercontent.com/92082798/141684208-f3a4c9b8-769e-420d-a7e4-1cfd633acf33.png)
+
 3.  ```git log --pretty=format:'%h %ad' --date=short```
 ![image](https://user-images.githubusercontent.com/92082798/141684212-741c57a4-43b0-45a8-8cec-d9a3dc5e9142.png)
 4.  ```git log --pretty=format:'%h %ad' --date=short```
